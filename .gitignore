@@ -20,8 +20,5 @@ routeTree.gen.ts
 .env
 .env.*
 
-# Local builds of mismo, until 0.1.0-beta.1 is on npm.
-.local-mismo/
-
 # Private notes.
 tmp/

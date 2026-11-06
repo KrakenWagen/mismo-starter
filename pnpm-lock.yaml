@@ -8,10 +8,6 @@ overrides:
   '@babel/core': 7.29.7
   react: 19.3.0
   react-dom: 19.3.0
-  '@mismo/core': file:.local-mismo/mismo-core-0.1.0-beta.1.tgz
-  '@mismo/expo': file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz
-  '@mismo/next': file:.local-mismo/mismo-next-0.1.0-beta.1.tgz
-  '@mismo/tanstack': file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz
 
 importers:
 
@@ -27,11 +23,11 @@ importers:
         specifier: workspace:*
         version: link:../../packages/app
       '@mismo/core':
-        specifier: file:../../.local-mismo/mismo-core-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/expo':
-        specifier: file:../../.local-mismo/mismo-expo-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@react-native-async-storage/async-storage':
         specifier: 2.2.0
         version: 2.2.0(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))
@@ -79,11 +75,11 @@ importers:
         specifier: workspace:*
         version: link:../../packages/app
       '@mismo/core':
-        specifier: file:../../.local-mismo/mismo-core-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/next':
-        specifier: file:../../.local-mismo/mismo-next-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-next-0.1.0-beta.1.tgz(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       next:
         specifier: ^16.4.3
         version: 16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -116,11 +112,11 @@ importers:
         specifier: workspace:*
         version: link:../../packages/app
       '@mismo/core':
-        specifier: file:../../.local-mismo/mismo-core-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/tanstack':
-        specifier: file:../../.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@tanstack/react-router':
         specifier: ^1.170.46
         version: 1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -165,17 +161,17 @@ importers:
   packages/app:
     dependencies:
       '@mismo/core':
-        specifier: file:../../.local-mismo/mismo-core-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/expo':
-        specifier: file:../../.local-mismo/mismo-expo-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/next':
-        specifier: file:../../.local-mismo/mismo-next-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-next-0.1.0-beta.1.tgz(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@mismo/tanstack':
-        specifier: file:../../.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz
-        version: file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+        specifier: 0.1.0-beta.1
+        version: 0.1.0-beta.1(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@react-native-async-storage/async-storage':
         specifier: 2.2.0
         version: 2.2.0(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))
@@ -997,9 +993,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mismo/core@file:.local-mismo/mismo-core-0.1.0-beta.1.tgz':
-    resolution: {integrity: sha512-7Svje2ikA0IKnz5p/qiXzWwp+F165oiyv4Zr9Gco+Y2mvxcFy6/50GhkPHEjMubt4cJHGxZOGJChOClftJF+Bw==, tarball: file:.local-mismo/mismo-core-0.1.0-beta.1.tgz}
-    version: 0.1.0-beta.1
+  '@mismo/core@0.1.0-beta.1':
+    resolution: {integrity: sha512-VsM5qErvp2pjWqlyD5Sdwv2/cE0RbijcN6H4Zje788RQ43hFr03csXlXXKJ2b4AjbnAycuK0isagxWwe2mMCzA==}
     engines: {node: '>=22.18'}
     hasBin: true
     peerDependencies:
@@ -1009,26 +1004,23 @@ packages:
       vite:
         optional: true
 
-  '@mismo/expo@file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz':
-    resolution: {integrity: sha512-a4NAVLHzl4Vv8rmkARaZcGnqMf6gnpHuTuLoADe3x7beuWsPkV73a795H+TsoSmVbUFEZj2w4WCQtfBd1TKbCQ==, tarball: file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz}
-    version: 0.1.0-beta.1
+  '@mismo/expo@0.1.0-beta.1':
+    resolution: {integrity: sha512-VmvUSuFBB1OPLVCo5WP8B3BnYf3/nVHKBFcP7YU8gI1P43ZHeYSiLvO9euN/2lvf9eFSGNNn9+PYg1Ms55+/Pw==}
     engines: {node: '>=22.18'}
     peerDependencies:
       expo-router: '>=58 <59'
       react: 19.3.0
       react-native: '>=0.79'
 
-  '@mismo/next@file:.local-mismo/mismo-next-0.1.0-beta.1.tgz':
-    resolution: {integrity: sha512-6dQ/IjMt9vjTMqON2zoRpN1n0VWDAxw2oD7dDDyMOvlwlwswWnF5cEkb+Jml/zWDt6br17OMP9e+Azq5kwcxlg==, tarball: file:.local-mismo/mismo-next-0.1.0-beta.1.tgz}
-    version: 0.1.0-beta.1
+  '@mismo/next@0.1.0-beta.1':
+    resolution: {integrity: sha512-m0te0QWeQWStAr1ppWqCZIvN47aPF0jUP7F4ne55dhgrOe84pa+b8liMwTOGlwQWa83HlIWVWscd45HPHnfCbA==}
     engines: {node: '>=22.18'}
     peerDependencies:
       next: '>=16 <17'
       react: 19.3.0
 
-  '@mismo/tanstack@file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz':
-    resolution: {integrity: sha512-M2o/5Ew4ZiEPsfooxqQdZMMpXv98r1ypNeIspv4sqkGwssJSWrE2K6Vsrn034j2mObyCg/fVGRTv13gncd6NRA==, tarball: file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz}
-    version: 0.1.0-beta.1
+  '@mismo/tanstack@0.1.0-beta.1':
+    resolution: {integrity: sha512-4S2YT8c0nmrgpFPH6vXfChD6d34pZMn9hkRbzMYLObGl1Wv6lP0s0AOEGS7on5rLQ7dIWlZ/LEMG3ihdlPA73A==}
     engines: {node: '>=22.18'}
     peerDependencies:
       '@tanstack/react-router': '>=1.160'
@@ -4727,32 +4719,32 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@mismo/core@file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
+  '@mismo/core@0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
     dependencies:
       react: 19.3.0
     optionalDependencies:
       vite: 8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2)
 
-  '@mismo/expo@file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
+  '@mismo/expo@0.1.0-beta.1(expo-router@58.0.30)(react-native@0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
     dependencies:
-      '@mismo/core': file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+      '@mismo/core': 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       expo-router: 58.0.30(e288ff6a8f8968bc4ac310392d1d05dd)
       react: 19.3.0
       react-native: 0.88.1(@babel/core@7.29.7)(@react-native/metro-config@0.88.1(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.3.0)
     transitivePeerDependencies:
       - vite
 
-  '@mismo/next@file:.local-mismo/mismo-next-0.1.0-beta.1.tgz(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
+  '@mismo/next@0.1.0-beta.1(next@16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
     dependencies:
-      '@mismo/core': file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+      '@mismo/core': 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       next: 16.4.5(@babel/core@7.29.7)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react: 19.3.0
     transitivePeerDependencies:
       - vite
 
-  '@mismo/tanstack@file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
+  '@mismo/tanstack@0.1.0-beta.1(@tanstack/react-router@1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))':
     dependencies:
-      '@mismo/core': file:.local-mismo/mismo-core-0.1.0-beta.1.tgz(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
+      '@mismo/core': 0.1.0-beta.1(react@19.3.0)(vite@8.3.6(@types/node@24.19.2)(jiti@2.7.0)(terser@5.51.2))
       '@tanstack/react-router': 1.170.46(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react: 19.3.0
     transitivePeerDependencies:
