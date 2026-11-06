@@ -54,6 +54,7 @@ export default function NativeLayout() {
               name="notes/[id]"
               options={({ route }) => ({
                 title: "",
+                headerTransparent: false,
                 headerRight: () => <NoteActions id={(route.params as { id: string }).id} />,
               })}
             />

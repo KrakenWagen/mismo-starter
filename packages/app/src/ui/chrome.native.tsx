@@ -1,10 +1,8 @@
 // Native's side of the chrome: scrolling, the keyboard, and the window's width.
+import { useHeaderHeight } from "expo-router/react-navigation";
 import type { ReactNode } from "react";
 import { Alert, KeyboardAvoidingView, Linking, ScrollView, Share, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
-/** The height of the native stack's header, below the safe area. */
-const HEADER_HEIGHT = 44;
 
 /** The same width as the shared styles' media queries. */
 export function useNativeLayout() {
@@ -47,9 +45,10 @@ export function NativeSafeArea({ children }: { children: ReactNode }) {
 }
 
 export function NativeKeyboardFrame({ children }: { children: ReactNode }) {
-  const { top } = useSafeAreaInsets();
+  // Includes the status bar, and differs by iOS version: taller with Liquid Glass.
+  const headerHeight = useHeaderHeight();
   return (
-    <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={top + HEADER_HEIGHT} style={{ flex: 1 }}>
+    <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={headerHeight} style={{ flex: 1 }}>
       {children}
     </KeyboardAvoidingView>
   );
