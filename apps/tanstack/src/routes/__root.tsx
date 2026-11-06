@@ -8,9 +8,12 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "mismo starter" },
+      { title: "Notes" },
     ],
-    links: [{ rel: "stylesheet", href: globals }],
+    links: [
+      { rel: "stylesheet", href: globals },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    ],
   }),
   shellComponent: Document,
   component: Outlet,

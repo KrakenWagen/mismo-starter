@@ -2,6 +2,8 @@
 
 Write your screens once, and run them in a native app and on the web. Each app keeps its own router, thanks to [mismo](https://mismo.dev).
 
+The demo is a small notes app: a sidebar on wide screens, tabs and native screens on phones, and the same routes and editor everywhere.
+
 ```
 apps
 ├── native                # Expo app
@@ -19,7 +21,7 @@ packages
 - **One set of screens:** a file in `packages/app/routes` runs in every app.
 - **Your choice of router:** Expo Router on native, and Next.js or TanStack Start on the web. mismo generates each app's route files for you.
 - **Typed links:** misspell a route or forget a param, and `pnpm typecheck` fails.
-- **Platform splits when you need them:** `about.web.tsx` and `about.native.tsx` are both `/about`, with a different screen on each platform.
+- **Platform splits when you need them:** `settings.web.tsx` and `settings.native.tsx` are both `/settings`: one exports notes as a download, the other through the share sheet.
 
 ## Quick start
 
@@ -40,14 +42,14 @@ Your apps are now running:
 
 ## Make your first change
 
-Open the home screen, `packages/app/routes/(app)/(tabs)/index.tsx`, and change its title:
+Open the note list, `packages/app/src/ui/NoteList.tsx`, and change its heading:
 
 ```diff
-- <Title>Notes</Title>
-+ <Title>My notes</Title>
+- <html.h1 style={styles.title}>Notes</html.h1>
++ <html.h1 style={styles.title}>My notes</html.h1>
 ```
 
-All apps update, because every app shares this route and screen.
+All apps update, because they share this screen.
 
 ## Learn more
 

@@ -1,15 +1,69 @@
+/* A layer declared first, so the styles from your screens override it. */
+@layer reset {
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+
+  /* The editor's fields have no visible box, so the caret shows focus. */
+  input,
+  textarea {
+    outline: none;
+  }
+}
+
 /* React Strict DOM's PostCSS plugin replaces this with the styles from your screens. */
 @react-strict-dom;
 
 html,
 body {
   margin: 0;
-  min-height: 100%;
-  background: #fafafa;
-  font-family: system-ui, sans-serif;
+  height: 100%;
+  background: #ffffff;
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #17171a;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Outside the layer, to beat React Strict DOM's own default for textareas. */
+textarea {
+  resize: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input[type="search"]:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 1px;
+}
+
+/* Page changes: a quick crossfade. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 140ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  * {
+    transition-duration: 0ms !important;
+  }
 }

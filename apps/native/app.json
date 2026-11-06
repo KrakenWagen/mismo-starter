@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "mismo starter",
+    "name": "Notes",
     "slug": "mismo-starter",
     "scheme": "mismostarter",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": { "bundleIdentifier": "com.example.mismostarter" },
     "android": { "package": "com.example.mismostarter" },
     "plugins": ["expo-router"]
