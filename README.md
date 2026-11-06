@@ -47,7 +47,7 @@ Your apps are now running:
 Open the note list, `packages/app/src/ui/NoteList.tsx`, and change its heading:
 
 ```diff
-- <html.h1 style={styles.title}>Notes</html.h1>
+- <html.h1 style={styles.title}>Mismo Notes</html.h1>
 + <html.h1 style={styles.title}>My notes</html.h1>
 ```
 

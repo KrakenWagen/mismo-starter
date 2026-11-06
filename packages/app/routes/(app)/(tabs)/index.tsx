@@ -9,8 +9,8 @@ import { useChrome } from "../../../src/ui/chrome.tsx";
 import { Muted } from "../../../src/ui/primitives.tsx";
 import { colors } from "../../../src/ui/tokens.css.ts";
 
-export const next = { metadata: { title: "Notes" } } satisfies NextRouteOptions;
-export const tanstack = { head: () => ({ meta: [{ title: "Notes" }] }) } satisfies TanstackRouteOptions;
+export const next = { metadata: { title: "Mismo Notes" } } satisfies NextRouteOptions;
+export const tanstack = { head: () => ({ meta: [{ title: "Mismo Notes" }] }) } satisfies TanstackRouteOptions;
 
 export default function Home() {
   const { platform, useWideLayout } = useChrome();

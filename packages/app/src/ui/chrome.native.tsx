@@ -1,6 +1,6 @@
 // Native's side of the chrome: scrolling, the keyboard, and the window's width.
 import type { ReactNode } from "react";
-import { Alert, KeyboardAvoidingView, ScrollView, Share, useWindowDimensions, View } from "react-native";
+import { Alert, KeyboardAvoidingView, Linking, ScrollView, Share, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 /** The height of the native stack's header, below the safe area. */
@@ -9,6 +9,15 @@ const HEADER_HEIGHT = 44;
 /** The same width as the shared styles' media queries. */
 export function useNativeLayout() {
   return useWindowDimensions().width >= 840;
+}
+
+/** React Strict DOM's <a> doesn't handle href on native. */
+export function NativeExternalLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <Text accessibilityRole="link" onPress={() => void Linking.openURL(href)}>
+      {children}
+    </Text>
+  );
 }
 
 export const nativeShareText = {
@@ -25,7 +34,7 @@ export function nativeConfirm(message: string, action: string, onConfirm: () => 
 
 export function NativeScroll({ children }: { children: ReactNode }) {
   return (
-    <ScrollView keyboardShouldPersistTaps="handled" style={{ flex: 1 }}>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled" style={{ flex: 1 }}>
       {children}
     </ScrollView>
   );

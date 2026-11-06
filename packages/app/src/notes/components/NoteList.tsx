@@ -22,7 +22,7 @@ export function NoteList({ variant }: { variant: "page" | "sidebar" }) {
     <html.div style={styles.list}>
       <html.div style={styles.header}>
         <html.div style={styles.titleRow}>
-          <html.h1 style={styles.title}>Notes</html.h1>
+          <html.h1 style={styles.title}>Mismo Notes</html.h1>
           <Button variant="strong" label="New note" onClick={createNote}>
             New
           </Button>

@@ -12,7 +12,7 @@ import { webStorage } from "../../src/notes/storage.web.ts";
 import { useDropEmptyNotes } from "../../src/notes/useDropEmptyNotes.ts";
 import { AppShell } from "../../src/ui/AppShell.tsx";
 import { ChromeProvider, type Chrome } from "../../src/ui/chrome.tsx";
-import { useWebLayout, webConfirm, WebKeyboardFrame, WebScroll, webShareText, webTruncate } from "../../src/ui/chrome.web.tsx";
+import { useWebLayout, webConfirm, WebExternalLink, WebKeyboardFrame, WebScroll, webShareText, webTruncate } from "../../src/ui/chrome.web.tsx";
 import { colors } from "../../src/ui/tokens.css.ts";
 
 const styles = css.create({
@@ -23,6 +23,7 @@ const chrome: Chrome = {
   platform: "web",
   Scroll: WebScroll,
   KeyboardFrame: WebKeyboardFrame,
+  ExternalLink: WebExternalLink,
   useWideLayout: useWebLayout,
   truncate: webTruncate,
   shareText: webShareText,

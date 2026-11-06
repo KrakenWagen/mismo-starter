@@ -3,8 +3,8 @@ import type { NextRouteOptions } from "@mismo/next";
 import type { TanstackRouteOptions } from "@mismo/tanstack";
 import { css, html } from "react-strict-dom";
 
-import { useChrome } from "../../../src/ui/chrome.tsx";
-import { Heading, Page } from "../../../src/ui/primitives.tsx";
+import { CreditedPage } from "../../../src/notes/components/CreditedPage.tsx";
+import { Heading } from "../../../src/ui/primitives.tsx";
 import { colors } from "../../../src/ui/tokens.css.ts";
 
 export const next = { metadata: { title: "Shortcuts" } } satisfies NextRouteOptions;
@@ -18,22 +18,18 @@ const SHORTCUTS = [
 ];
 
 export default function Shortcuts() {
-  const { Scroll } = useChrome();
-
   return (
-    <Scroll>
-      <Page>
-        <Heading>Keyboard shortcuts</Heading>
-        <html.div style={styles.list}>
-          {SHORTCUTS.map(([key, action]) => (
-            <html.div key={key} style={styles.row}>
-              <html.span style={styles.action}>{action}</html.span>
-              <html.kbd style={styles.key}>{key}</html.kbd>
-            </html.div>
-          ))}
-        </html.div>
-      </Page>
-    </Scroll>
+    <CreditedPage>
+      <Heading>Keyboard shortcuts</Heading>
+      <html.div style={styles.list}>
+        {SHORTCUTS.map(([key, action]) => (
+          <html.div key={key} style={styles.row}>
+            <html.span style={styles.action}>{action}</html.span>
+            <html.kbd style={styles.key}>{key}</html.kbd>
+          </html.div>
+        ))}
+      </html.div>
+    </CreditedPage>
   );
 }
 

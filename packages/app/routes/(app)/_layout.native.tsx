@@ -12,7 +12,7 @@ import { nativeStorage } from "../../src/notes/storage.native.ts";
 import { useDropEmptyNotes } from "../../src/notes/useDropEmptyNotes.ts";
 import { AppShell } from "../../src/ui/AppShell.tsx";
 import { ChromeProvider, type Chrome } from "../../src/ui/chrome.tsx";
-import { nativeConfirm, NativeKeyboardFrame, NativeSafeArea, NativeScroll, nativeShareText, useNativeLayout } from "../../src/ui/chrome.native.tsx";
+import { nativeConfirm, NativeExternalLink, NativeKeyboardFrame, NativeSafeArea, NativeScroll, nativeShareText, useNativeLayout } from "../../src/ui/chrome.native.tsx";
 import { colors } from "../../src/ui/tokens.css.ts";
 
 const styles = css.create({
@@ -23,6 +23,7 @@ const chrome: Chrome = {
   platform: "native",
   Scroll: NativeScroll,
   KeyboardFrame: NativeKeyboardFrame,
+  ExternalLink: NativeExternalLink,
   useWideLayout: useNativeLayout,
   shareText: nativeShareText,
   confirm: nativeConfirm,

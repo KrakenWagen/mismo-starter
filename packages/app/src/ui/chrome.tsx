@@ -20,6 +20,8 @@ export type Chrome = {
   shareText: { label: string; run: (text: string, filename: string) => void };
   /** Asks before doing something destructive. */
   confirm: (message: string, action: string, onConfirm: () => void) => void;
+  /** A link out of the app, which opens in the browser. */
+  ExternalLink: ComponentType<{ href: string; children: ReactNode }>;
   /** Links to other pages, which can include routes only this platform has. */
   navLinks: ReactNode;
 };

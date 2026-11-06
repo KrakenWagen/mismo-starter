@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { css, html } from "react-strict-dom";
 
 const styles = css.create({
-  scroll: { flex: 1, minHeight: 0, overflowY: "auto" },
+  scroll: { display: "flex", flexDirection: "column", flex: 1, minHeight: 0, overflowY: "auto" },
   truncate: { overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" },
 });
 
@@ -13,6 +13,14 @@ export function WebScroll({ children }: { children: ReactNode }) {
 
 export function WebKeyboardFrame({ children }: { children: ReactNode }) {
   return <>{children}</>;
+}
+
+export function WebExternalLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <html.a href={href} target="_blank" rel="noreferrer">
+      {children}
+    </html.a>
+  );
 }
 
 export const useWebLayout = () => null;
