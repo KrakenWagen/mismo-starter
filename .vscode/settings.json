@@ -1,0 +1,8 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, package-lock.json, yarn.lock, bun.lock, bun.lockb",
+    "tsconfig.json": "tsconfig.*.json, *.tsbuildinfo",
+  }
+}
