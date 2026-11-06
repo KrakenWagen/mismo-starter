@@ -1,0 +1,25 @@
+{
+  "name": "@acme/app",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./routes/*": "./routes/*",
+    "./babel-web": "./babel-web.cjs"
+  },
+  "scripts": {
+    "typecheck": "mismo types --config routes.config.ts && tsc -b"
+  },
+  "dependencies": {
+    "@mismo/core": "0.1.0-beta.1",
+    "@mismo/expo": "0.1.0-beta.1",
+    "@mismo/next": "0.1.0-beta.1",
+    "@mismo/tanstack": "0.1.0-beta.1",
+    "react-strict-dom": "^0.0.55"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "expo-router": "~58.0.29",
+    "react": "19.3.0",
+    "react-native": "0.88.1"
+  }
+}

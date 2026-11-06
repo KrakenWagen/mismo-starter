@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  // The plain files, with the routes every platform has: a shared screen can't link to a route that
+  // exists on only one platform.
+  "include": ["routes", "src"],
+  "exclude": ["**/*.native.*", "**/*.web.*", "src/routes.*.gen.ts"]
+}

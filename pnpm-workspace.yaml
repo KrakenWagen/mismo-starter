@@ -1,0 +1,18 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# One copy of React across the apps: React Native needs this exact version. Babel stays on 7, which
+# Expo and React Strict DOM's preset need.
+overrides:
+  "@babel/core": 7.29.7
+  react: 19.3.0
+  react-dom: 19.3.0
+  # Local builds of mismo. Remove these once 0.1.0-beta.1 is on npm.
+  "@mismo/core": file:.local-mismo/mismo-core-0.1.0-beta.1.tgz
+  "@mismo/expo": file:.local-mismo/mismo-expo-0.1.0-beta.1.tgz
+  "@mismo/next": file:.local-mismo/mismo-next-0.1.0-beta.1.tgz
+  "@mismo/tanstack": file:.local-mismo/mismo-tanstack-0.1.0-beta.1.tgz
+
+onlyBuiltDependencies:
+  - esbuild

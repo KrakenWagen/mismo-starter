@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "mismo starter",
+    "slug": "mismo-starter",
+    "scheme": "mismostarter",
+    "userInterfaceStyle": "light",
+    "ios": { "bundleIdentifier": "com.example.mismostarter" },
+    "android": { "package": "com.example.mismostarter" },
+    "plugins": ["expo-router"]
+  }
+}

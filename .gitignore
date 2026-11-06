@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.output/
+.next/
+.nitro/
+.tanstack/
+.expo/
+expo-env.d.ts
+next-env.d.ts
+*.tsbuildinfo
+ios/
+android/
+routeTree.gen.ts
+
+# Route types written by mismo. Generated route files are ignored by a .gitignore mismo writes in
+# each routes folder.
+**/routes*.gen.ts
+
+.DS_Store
+.env
+.env.*
+
+# Local builds of mismo, until 0.1.0-beta.1 is on npm.
+.local-mismo/
+
+# Private notes.
+tmp/

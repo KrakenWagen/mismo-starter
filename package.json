@@ -1,0 +1,20 @@
+{
+  "name": "mismo-starter",
+  "private": true,
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=22.18",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "next": "pnpm --filter @acme/next dev",
+    "tanstack": "pnpm --filter @acme/tanstack dev",
+    "native": "pnpm --filter @acme/native start",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm --filter @acme/next --filter @acme/tanstack build"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
