@@ -1,24 +1,13 @@
-// /settings is one screen with one difference per platform: how notes leave the app.
 import { css, html } from "react-strict-dom";
 
-import { useNotes } from "../notes/provider.tsx";
-import { useChrome } from "./chrome.tsx";
-import { Button, Heading, Muted, Page } from "./primitives.tsx";
-import { colors } from "./tokens.css.ts";
+import { useNotes } from "../provider.tsx";
+import { useChrome } from "../../ui/chrome.tsx";
+import { Button, Heading, Muted, Page } from "../../ui/primitives.tsx";
+import { colors } from "../../ui/tokens.css.ts";
 
-export function SettingsScreen({
-  exportLabel,
-  exportHint,
-  onExport,
-  onReset,
-}: {
-  exportLabel: string;
-  exportHint: string;
-  onExport: (notesJson: string) => void;
-  onReset: (reset: () => void) => void;
-}) {
+export function SettingsScreen() {
   const { ready, notes, store } = useNotes();
-  const { Scroll } = useChrome();
+  const { Scroll, shareText, confirm } = useChrome();
 
   return (
     <Scroll>
@@ -28,10 +17,10 @@ export function SettingsScreen({
         <html.section style={styles.section}>
           <html.div style={styles.text}>
             <html.span style={styles.label}>Export</html.span>
-            <html.span style={styles.hint}>{exportHint}</html.span>
+            <html.span style={styles.hint}>Gets a copy of your notes as JSON.</html.span>
           </html.div>
-          <Button variant="strong" onClick={() => onExport(JSON.stringify(notes, null, 2))}>
-            {exportLabel}
+          <Button variant="strong" onClick={() => shareText.run(JSON.stringify(notes, null, 2), "notes.json")}>
+            {shareText.label}
           </Button>
         </html.section>
         <html.section style={styles.section}>
@@ -39,7 +28,7 @@ export function SettingsScreen({
             <html.span style={styles.label}>Start over</html.span>
             <html.span style={styles.hint}>Replaces your notes with the samples.</html.span>
           </html.div>
-          <Button variant="danger" onClick={() => onReset(store.resetSamples)}>
+          <Button variant="danger" onClick={() => confirm("Replace your notes with the samples?", "Reset", store.resetSamples)}>
             Reset
           </Button>
         </html.section>

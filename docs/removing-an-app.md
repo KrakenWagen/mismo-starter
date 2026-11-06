@@ -7,7 +7,7 @@ To remove an app:
 3. In `packages/app/routes.config.ts`, remove it from `validFor`.
 4. For Next.js or TanStack Start, also:
    - Remove its import from `routes.config.ts` and its `@mismo/*` dependency from `packages/app/package.json`.
-   - In `packages/app/routes`, remove its page title option (`export const next` or `export const tanstack`) and the type import above it, from `index.tsx`, `settings.web.tsx` and `shortcuts.web.tsx`.
+   - In `packages/app/routes`, remove its page title option (`export const next` or `export const tanstack`) and the type import above it, from `index.tsx`, `settings.tsx` and `shortcuts.web.tsx`.
 
 If you remove the native app, also:
 

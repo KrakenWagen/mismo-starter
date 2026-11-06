@@ -1,19 +1,21 @@
 import { useNav } from "@mismo/core";
 import { css, html } from "react-strict-dom";
 
-import { useNotes } from "../notes/provider.tsx";
-import { Button, useEntered } from "./primitives.tsx";
-import { colors } from "./tokens.css.ts";
+import { useChrome } from "../../ui/chrome.tsx";
+import { useNotes } from "../provider.tsx";
+import { Button, useEntered } from "../../ui/primitives.tsx";
+import { colors } from "../../ui/tokens.css.ts";
 
 /** Offers to bring back the note you just deleted. */
-export function Toast({ aboveTabs }: { aboveTabs: boolean }) {
+export function Toast() {
   const { removed } = useNotes();
   // Keyed, so a second delete animates in again.
-  return removed ? <ToastCard key={removed.id} id={removed.id} aboveTabs={aboveTabs} /> : null;
+  return removed ? <ToastCard key={removed.id} id={removed.id} /> : null;
 }
 
-function ToastCard({ id, aboveTabs }: { id: string; aboveTabs: boolean }) {
+function ToastCard({ id }: { id: string }) {
   const { store } = useNotes();
+  const aboveTabs = useChrome().platform === "native";
   const nav = useNav();
   const entered = useEntered();
 

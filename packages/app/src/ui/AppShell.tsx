@@ -1,33 +1,18 @@
-// The frame around every screen: a sidebar on wide screens, the undo toast, and tidying up empty notes.
-import { usePathname } from "@mismo/core";
-import { useEffect, type ReactNode } from "react";
+// The frame around every screen: a sidebar on wide screens, the content, and anything floating above.
+import type { ReactNode } from "react";
 import { css, html } from "react-strict-dom";
 
-import { useNotes } from "../notes/provider.tsx";
 import { useChrome } from "./chrome.tsx";
-import { NoteList } from "./NoteList.tsx";
-import { Toast } from "./Toast.tsx";
 import { colors } from "./tokens.css.ts";
 
-export function AppShell({ children }: { children: ReactNode }) {
-  const { store } = useNotes();
-  const { platform, useWideLayout } = useChrome();
-  const wide = useWideLayout();
-  const pathname = usePathname();
-
-  useEffect(() => {
-    store.pruneEmpty(pathname.match(/^\/notes\/(.+)$/)?.[1] ?? null);
-  }, [store, pathname]);
+export function AppShell({ sidebar, overlay, children }: { sidebar?: ReactNode; overlay?: ReactNode; children: ReactNode }) {
+  const wide = useChrome().useWideLayout();
 
   return (
     <html.div style={styles.shell}>
-      {wide !== false ? (
-        <html.aside style={styles.sidebar}>
-          <NoteList variant="sidebar" />
-        </html.aside>
-      ) : null}
+      {sidebar && wide !== false ? <html.aside style={styles.sidebar}>{sidebar}</html.aside> : null}
       <html.div style={styles.content}>{children}</html.div>
-      <Toast aboveTabs={platform === "native"} />
+      {overlay}
     </html.div>
   );
 }

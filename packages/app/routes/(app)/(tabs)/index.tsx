@@ -4,8 +4,8 @@ import type { NextRouteOptions } from "@mismo/next";
 import type { TanstackRouteOptions } from "@mismo/tanstack";
 import { css, html } from "react-strict-dom";
 
+import { NoteList } from "../../../src/notes/components/NoteList.tsx";
 import { useChrome } from "../../../src/ui/chrome.tsx";
-import { NoteList } from "../../../src/ui/NoteList.tsx";
 import { Muted } from "../../../src/ui/primitives.tsx";
 import { colors } from "../../../src/ui/tokens.css.ts";
 

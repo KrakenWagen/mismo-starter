@@ -2,11 +2,11 @@
 import { BackLink, useNav } from "@mismo/core";
 import { css, html } from "react-strict-dom";
 
-import { useNotes } from "../notes/provider.tsx";
-import { formatEdited } from "../notes/store.ts";
-import { useChrome } from "./chrome.tsx";
-import { Button, Muted } from "./primitives.tsx";
-import { colors } from "./tokens.css.ts";
+import { useNotes } from "../provider.tsx";
+import { formatEdited } from "../store.ts";
+import { useChrome } from "../../ui/chrome.tsx";
+import { Button, Muted } from "../../ui/primitives.tsx";
+import { colors } from "../../ui/tokens.css.ts";
 
 /** Pin and delete: above the note on the web, in the header on native. */
 export function NoteActions({ id }: { id: string }) {
@@ -37,7 +37,7 @@ export function NoteActions({ id }: { id: string }) {
 
 export function NoteEditor({ id }: { id: string }) {
   const { ready, notes, saving, store } = useNotes();
-  const { platform, EditorFrame } = useChrome();
+  const { platform, KeyboardFrame } = useChrome();
   const note = notes.find((candidate) => candidate.id === id);
 
   if (!ready) return <html.div style={styles.placeholder} />;
@@ -55,7 +55,7 @@ export function NoteEditor({ id }: { id: string }) {
   const isEmpty = !note.title && !note.body;
 
   return (
-    <EditorFrame>
+    <KeyboardFrame>
       <html.main style={styles.editor}>
         {platform === "web" ? (
           <html.div style={styles.toolbar}>
@@ -88,7 +88,7 @@ export function NoteEditor({ id }: { id: string }) {
           />
         </html.div>
       </html.main>
-    </EditorFrame>
+    </KeyboardFrame>
   );
 }
 
@@ -119,7 +119,7 @@ const styles = css.create({
     maxWidth: 720,
     boxSizing: "border-box",
     marginInline: "auto",
-    paddingBlock: { default: 8, "@media (min-width: 840px)": 24 },
+    paddingBlock: { default: 20, "@media (min-width: 840px)": 24 },
     paddingInline: { default: 20, "@media (min-width: 840px)": 32 },
   },
   title: {

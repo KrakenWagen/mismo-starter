@@ -1,14 +1,18 @@
 // The web's shell. Everything specific to the web is passed in here: storage, shortcuts, and a link
-// to /shortcuts, which only the web has.
+// to /shortcuts, which only the web has. Replace what comes from notes/ with your own app.
 import { Link, Slot } from "@mismo/core";
 import { ViewTransition } from "react";
 import { css, html } from "react-strict-dom";
 
+import { useSaveOnPageHide, useShortcuts } from "../../src/notes/behaviour.web.ts";
+import { NoteList } from "../../src/notes/components/NoteList.tsx";
+import { Toast } from "../../src/notes/components/Toast.tsx";
 import { NotesProvider } from "../../src/notes/provider.tsx";
 import { webStorage } from "../../src/notes/storage.web.ts";
+import { useDropEmptyNotes } from "../../src/notes/useDropEmptyNotes.ts";
 import { AppShell } from "../../src/ui/AppShell.tsx";
 import { ChromeProvider, type Chrome } from "../../src/ui/chrome.tsx";
-import { usePageLifecycle, useShortcuts, useWebLayout, WebEditorFrame, WebScroll, webTruncate } from "../../src/ui/chrome.web.tsx";
+import { useWebLayout, webConfirm, WebKeyboardFrame, WebScroll, webShareText, webTruncate } from "../../src/ui/chrome.web.tsx";
 import { colors } from "../../src/ui/tokens.css.ts";
 
 const styles = css.create({
@@ -18,10 +22,12 @@ const styles = css.create({
 const chrome: Chrome = {
   platform: "web",
   Scroll: WebScroll,
-  EditorFrame: WebEditorFrame,
+  KeyboardFrame: WebKeyboardFrame,
   useWideLayout: useWebLayout,
   truncate: webTruncate,
-  listFooter: (
+  shareText: webShareText,
+  confirm: webConfirm,
+  navLinks: (
     <>
       <Link to="/settings">
         <html.span style={styles.footerLink}>Settings</html.span>
@@ -38,7 +44,7 @@ export default function WebLayout() {
     <NotesProvider storage={webStorage}>
       <ChromeProvider value={chrome}>
         <WebBehaviour />
-        <AppShell>
+        <AppShell sidebar={<NoteList variant="sidebar" />} overlay={<Toast />}>
           <ViewTransition>
             <Slot />
           </ViewTransition>
@@ -50,6 +56,7 @@ export default function WebLayout() {
 
 function WebBehaviour() {
   useShortcuts();
-  usePageLifecycle();
+  useSaveOnPageHide();
+  useDropEmptyNotes();
   return null;
 }

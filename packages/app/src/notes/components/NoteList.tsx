@@ -2,16 +2,16 @@
 import { Link, usePathname } from "@mismo/core";
 import { css, html } from "react-strict-dom";
 
-import { useNotes } from "../notes/provider.tsx";
-import { formatEdited, visibleNotes, type Note } from "../notes/store.ts";
-import { useChrome } from "./chrome.tsx";
-import { Button, useEntered } from "./primitives.tsx";
-import { colors } from "./tokens.css.ts";
-import { useCreateNote } from "./useCreateNote.ts";
+import { useNotes } from "../provider.tsx";
+import { formatEdited, visibleNotes, type Note } from "../store.ts";
+import { useChrome } from "../../ui/chrome.tsx";
+import { Button, useEntered } from "../../ui/primitives.tsx";
+import { colors } from "../../ui/tokens.css.ts";
+import { useCreateNote } from "../useCreateNote.ts";
 
 export function NoteList({ variant }: { variant: "page" | "sidebar" }) {
   const { ready, notes, query, store } = useNotes();
-  const { Scroll, listFooter, platform } = useChrome();
+  const { Scroll, navLinks, platform } = useChrome();
   const createNote = useCreateNote();
   const { pinned, others } = visibleNotes(notes, query);
   const nothingFound = ready && pinned.length === 0 && others.length === 0;
@@ -44,7 +44,7 @@ export function NoteList({ variant }: { variant: "page" | "sidebar" }) {
           {nothingFound ? <html.p style={styles.nothing}>{query ? "No notes match your search." : "No notes yet."}</html.p> : null}
         </html.div>
       </Scroll>
-      {variant === "sidebar" || platform === "web" ? <html.div style={styles.footer}>{listFooter}</html.div> : null}
+      {variant === "sidebar" || platform === "web" ? <html.div style={styles.footer}>{navLinks}</html.div> : null}
     </html.div>
   );
 }
