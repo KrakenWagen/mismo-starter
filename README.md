@@ -1,5 +1,7 @@
 # mismo starter
 
+[Website](https://mismo.dev) · [Docs](https://mismo.dev/docs/introduction) · [mismo on GitHub](https://github.com/KrakenWagen/mismo)
+
 Write your screens once, and run them in a native app and on the web. Each app keeps its own router, thanks to [mismo](https://mismo.dev).
 
 The demo is a small notes app: a sidebar on wide screens, tabs and native screens on phones, and the same routes and editor everywhere.
@@ -30,10 +32,10 @@ packages
 You need Node 22.18+ and pnpm 10+.
 
 ```sh
-pnpm dlx degit KrakenWagen/mismo-starter my-app  # Copy the starter
+pnpm create mismo my-app  # Pick your apps
 cd my-app
-pnpm install                                     # Install dependencies
-pnpm dev                                         # Start every app
+pnpm install              # Install dependencies
+pnpm dev                  # Start every app
 ```
 
 Your apps are now running:
@@ -67,7 +69,8 @@ Then run `pnpm typecheck`, which points out anything you missed.
 ## Learn more
 
 - [Keep only the apps you need](docs/removing-an-app.md)
-- [mismo docs](https://mismo.dev)
+- [mismo docs](https://mismo.dev/docs/introduction)
+- [mismo on GitHub](https://github.com/KrakenWagen/mismo)
 
 ## License
 
