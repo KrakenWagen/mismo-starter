@@ -46,7 +46,7 @@ Your apps are now running:
 
 ## Make your first change
 
-Open the note list, `packages/app/src/ui/NoteList.tsx`, and change its heading:
+Open the note list, `packages/app/src/notes/components/NoteList.tsx`, and change its heading:
 
 ```diff
 - <html.h1 style={styles.title}>Mismo Notes</html.h1>
