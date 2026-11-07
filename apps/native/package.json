@@ -13,6 +13,7 @@
     "@acme/app": "workspace:*",
     "@mismo/core": "0.1.0-beta.1",
     "@mismo/expo": "0.1.0-beta.1",
+    "@mismo/ui": "0.1.0-beta.1",
     "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~58.0.23",
     "expo-constants": "~58.0.12",
@@ -22,8 +23,7 @@
     "react": "19.3.0",
     "react-native": "0.88.1",
     "react-native-safe-area-context": "~5.11.1",
-    "react-native-screens": "~4.30.0",
-    "react-strict-dom": "^0.0.55"
+    "react-native-screens": "~4.30.0"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",

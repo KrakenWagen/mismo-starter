@@ -1,7 +1,7 @@
 // Native's shell: the same shared frame, around a native stack.
 import { Link } from "@mismo/core";
 import { Stack } from "expo-router";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useSaveInBackground } from "../../src/notes/behaviour.native.ts";
 import { NoteActions } from "../../src/notes/components/NoteEditor.tsx";

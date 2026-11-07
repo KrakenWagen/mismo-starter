@@ -1,5 +1,10 @@
-/* A layer declared first, so the styles from your screens override it. */
-@layer reset {
+@import "@mismo/ui/tailwind.css";
+
+/* Where Tailwind finds your classes. */
+@source "../../../packages/app";
+
+/* Below the styles from your screens. */
+@layer base {
   input,
   textarea,
   button {
@@ -11,10 +16,12 @@
   textarea {
     outline: none;
   }
-}
 
-/* React Strict DOM's PostCSS plugin replaces this with the styles from your screens. */
-@react-strict-dom;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 
 html,
 body {
@@ -31,11 +38,6 @@ body {
   body {
     background: #17171a;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 /* Outside the layer, to beat React Strict DOM's own default for textareas. */

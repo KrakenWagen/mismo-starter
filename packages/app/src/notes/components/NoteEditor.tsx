@@ -1,6 +1,6 @@
 // The editor. Every change saves by itself.
 import { BackLink, useNav } from "@mismo/core";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useNotes } from "../provider.tsx";
 import { formatEdited } from "../store.ts";
@@ -104,7 +104,7 @@ const styles = css.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    minHeight: 46,
+    minHeight: 58,
     paddingBlock: 6,
     paddingInline: 12,
   },

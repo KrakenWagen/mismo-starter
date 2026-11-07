@@ -11,10 +11,10 @@
     "@acme/app": "workspace:*",
     "@mismo/core": "0.1.0-beta.1",
     "@mismo/next": "0.1.0-beta.1",
+    "@mismo/ui": "0.1.0-beta.1",
     "next": "^16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "react-strict-dom": "^0.0.55"
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",

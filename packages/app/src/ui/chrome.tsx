@@ -1,7 +1,7 @@
 // What differs by platform inside shared screens. Each platform's layout provides it, so the shared
 // files don't import anything platform-specific.
 import { createContext, useContext, type ComponentProps, type ComponentType, type ReactNode } from "react";
-import type { html } from "react-strict-dom";
+import type { html } from "@mismo/ui";
 
 export type Chrome = {
   platform: "web" | "native";

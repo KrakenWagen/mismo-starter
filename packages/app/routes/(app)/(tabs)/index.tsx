@@ -2,7 +2,7 @@
 // is in the sidebar, so this shows a prompt instead.
 import type { NextRouteOptions } from "@mismo/next";
 import type { TanstackRouteOptions } from "@mismo/tanstack";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { NoteList } from "../../../src/notes/components/NoteList.tsx";
 import { useChrome } from "../../../src/ui/chrome.tsx";

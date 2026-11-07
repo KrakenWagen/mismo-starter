@@ -1,6 +1,6 @@
 // The frame around every screen: a sidebar on wide screens, the content, and anything floating above.
 import type { ReactNode } from "react";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useChrome } from "./chrome.tsx";
 import { colors } from "./tokens.css.ts";

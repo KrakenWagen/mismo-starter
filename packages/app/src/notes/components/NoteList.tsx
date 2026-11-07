@@ -1,6 +1,6 @@
 // The list of notes: the sidebar on wide screens, and the home screen on narrow ones.
 import { Link, usePathname } from "@mismo/core";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useNotes } from "../provider.tsx";
 import { formatEdited, visibleNotes, type Note } from "../store.ts";

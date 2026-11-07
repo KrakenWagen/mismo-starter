@@ -1,6 +1,6 @@
 // A scrolling page with the demo's credit at the bottom.
 import type { ReactNode } from "react";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useChrome } from "../../ui/chrome.tsx";
 import { Page } from "../../ui/primitives.tsx";

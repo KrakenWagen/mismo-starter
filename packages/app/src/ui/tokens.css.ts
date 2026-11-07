@@ -1,5 +1,5 @@
 // Every colour in the app, for light and dark. Dark mode follows the system.
-import { css } from "react-strict-dom";
+import { css } from "@mismo/ui";
 
 export const colors = css.defineVars({
   background: { default: "#ffffff", "@media (prefers-color-scheme: dark)": "#17171a" },

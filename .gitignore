@@ -11,6 +11,7 @@ next-env.d.ts
 ios/
 android/
 routeTree.gen.ts
+uniwind-types.d.ts
 
 # Route types written by mismo. Generated route files are ignored by a .gitignore mismo writes in
 # each routes folder.

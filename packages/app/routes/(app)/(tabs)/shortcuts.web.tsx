@@ -1,7 +1,7 @@
 // Only on the web: phones don't have keyboard shortcuts, so there's no /shortcuts on native.
 import type { NextRouteOptions } from "@mismo/next";
 import type { TanstackRouteOptions } from "@mismo/tanstack";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { CreditedPage } from "../../../src/notes/components/CreditedPage.tsx";
 import { Heading } from "../../../src/ui/primitives.tsx";
@@ -47,7 +47,7 @@ const styles = css.create({
   },
   action: { fontSize: 15, color: colors.text },
   key: {
-    minWidth: 28,
+    minWidth: 44,
     paddingBlock: 3,
     paddingInline: 8,
     fontSize: 13,

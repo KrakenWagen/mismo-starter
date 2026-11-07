@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { colors } from "./tokens.css.ts";
 
@@ -32,16 +32,16 @@ export function Button({
 }
 
 export function Heading({ children }: { children: ReactNode }) {
-  return <html.h1 style={styles.heading}>{children}</html.h1>;
+  return <html.h1 className="m-0 text-[28px] font-bold tracking-[-0.4px]" style={styles.headingColor}>{children}</html.h1>;
 }
 
 export function Muted({ children }: { children: ReactNode }) {
-  return <html.p style={styles.muted}>{children}</html.p>;
+  return <html.p className="m-0 text-[15px]/normal" style={styles.mutedColor}>{children}</html.p>;
 }
 
 /** A narrow, readable column for simple pages. */
 export function Page({ children }: { children: ReactNode }) {
-  return <html.main style={styles.page}>{children}</html.main>;
+  return <html.main className="mx-auto flex w-full max-w-[640px] flex-col gap-5 px-5 py-8">{children}</html.main>;
 }
 
 const styles = css.create({
@@ -62,19 +62,8 @@ const styles = css.create({
     opacity: { default: 1, ":active": 0.6 },
   },
   buttonText: { fontSize: 14, fontWeight: 500 },
-  heading: { margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: -0.4, color: colors.text },
-  muted: { margin: 0, fontSize: 15, lineHeight: 1.5, color: colors.muted },
-  page: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 20,
-    width: "100%",
-    maxWidth: 640,
-    boxSizing: "border-box",
-    marginInline: "auto",
-    paddingBlock: 32,
-    paddingInline: 20,
-  },
+  headingColor: { color: colors.text },
+  mutedColor: { color: colors.muted },
 });
 
 const buttonVariants = css.create({

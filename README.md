@@ -25,6 +25,7 @@ packages
 - **One set of screens:** a file in `packages/app/routes` runs in every app.
 - **Your choice of router:** Expo Router on native, and Next.js or TanStack Start on the web. mismo generates each app's route files for you.
 - **Typed links:** misspell a route or forget a param, and `pnpm typecheck` fails.
+- **Tailwind everywhere:** `<html.div className="flex p-4">` from [`@mismo/ui`](https://www.npmjs.com/package/@mismo/ui), with nothing added to your web bundle.
 - **Platform files when you need them:** `_layout.web.tsx` and `_layout.native.tsx` give each platform its own navigation, and `shortcuts.web.tsx` is a route only the web has. Most screens stay shared.
 
 ## Quick start

@@ -1,5 +1,5 @@
 import { useNav } from "@mismo/core";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useChrome } from "../../ui/chrome.tsx";
 import { useNotes } from "../provider.tsx";

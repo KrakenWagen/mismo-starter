@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./routes/*": "./routes/*",
-    "./babel-web": "./babel-web.cjs"
+    "./routes/*": "./routes/*"
   },
   "scripts": {
     "typecheck": "mismo types --config routes.config.ts && tsc -b"
@@ -14,8 +13,8 @@
     "@mismo/expo": "0.1.0-beta.1",
     "@mismo/next": "0.1.0-beta.1",
     "@mismo/tanstack": "0.1.0-beta.1",
-    "@react-native-async-storage/async-storage": "2.2.0",
-    "react-strict-dom": "^0.0.55"
+    "@mismo/ui": "0.1.0-beta.1",
+    "@react-native-async-storage/async-storage": "2.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.3.0",

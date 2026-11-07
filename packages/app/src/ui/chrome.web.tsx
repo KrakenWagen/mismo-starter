@@ -1,6 +1,6 @@
 // The web's side of the chrome: scrolling, and the styles only the web needs.
 import type { ReactNode } from "react";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 const styles = css.create({
   scroll: { display: "flex", flexDirection: "column", flex: 1, minHeight: 0, overflowY: "auto" },

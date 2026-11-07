@@ -1,6 +1,8 @@
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
 import { useColorScheme } from "react-native";
 
+import "../global.css";
+
 // Matches the shared colours in packages/app/src/ui/tokens.css.ts, for what the navigators draw.
 const light = { ...DefaultTheme, colors: { ...DefaultTheme.colors, background: "#ffffff", card: "#ffffff", primary: "#b4540a" } };
 const dark = { ...DarkTheme, colors: { ...DarkTheme.colors, background: "#17171a", card: "#17171a", primary: "#f5a35c" } };

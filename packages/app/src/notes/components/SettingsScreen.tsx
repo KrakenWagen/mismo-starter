@@ -1,4 +1,4 @@
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useNotes } from "../provider.tsx";
 import { CreditedPage } from "./CreditedPage.tsx";

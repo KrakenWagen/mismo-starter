@@ -2,7 +2,7 @@
 // to /shortcuts, which only the web has. Replace what comes from notes/ with your own app.
 import { Link, Slot } from "@mismo/core";
 import { ViewTransition } from "react";
-import { css, html } from "react-strict-dom";
+import { css, html } from "@mismo/ui";
 
 import { useSaveOnPageHide, useShortcuts } from "../../src/notes/behaviour.web.ts";
 import { NoteList } from "../../src/notes/components/NoteList.tsx";
