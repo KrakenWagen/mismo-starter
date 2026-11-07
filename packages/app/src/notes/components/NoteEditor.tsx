@@ -1,5 +1,5 @@
 // The editor. Every change saves by itself.
-import { BackLink, useNav } from "@mismo/core";
+import { useNav } from "@mismo/core";
 import { css, html } from "@mismo/ui";
 
 import { useNotes } from "../provider.tsx";
@@ -37,7 +37,7 @@ export function NoteActions({ id }: { id: string }) {
 
 export function NoteEditor({ id }: { id: string }) {
   const { ready, notes, saving, store } = useNotes();
-  const { platform, KeyboardFrame } = useChrome();
+  const { platform, BackLink, KeyboardFrame } = useChrome();
   const note = notes.find((candidate) => candidate.id === id);
 
   if (!ready) return <html.div style={styles.placeholder} />;

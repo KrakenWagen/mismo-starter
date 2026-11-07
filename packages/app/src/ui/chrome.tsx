@@ -1,5 +1,6 @@
 // What differs by platform inside shared screens. Each platform's layout provides it, so the shared
 // files don't import anything platform-specific.
+import type { BackLinkProps } from "@mismo/core";
 import { createContext, useContext, type ComponentProps, type ComponentType, type ReactNode } from "react";
 import type { html } from "@mismo/ui";
 
@@ -22,6 +23,8 @@ export type Chrome = {
   confirm: (message: string, action: string, onConfirm: () => void) => void;
   /** A link out of the app, which opens in the browser. */
   ExternalLink: ComponentType<{ href: string; children: ReactNode }>;
+  /** Goes back, or to `fallback` when there's nowhere to go back to. */
+  BackLink: ComponentType<BackLinkProps>;
   /** Links to other pages, which can include routes only this platform has. */
   navLinks: ReactNode;
 };

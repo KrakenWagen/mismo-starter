@@ -1,4 +1,5 @@
 @import "@mismo/ui/tailwind.css";
+@import "@acme/app/transitions.css";
 
 /* Where Tailwind finds your classes. */
 @source "../../../packages/app";
@@ -50,22 +51,4 @@ button:focus-visible,
 input[type="search"]:focus-visible {
   outline: 2px solid #d97706;
   outline-offset: 1px;
-}
-
-/* Page changes: a quick crossfade. */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 140ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
-  }
-
-  * {
-    transition-duration: 0ms !important;
-  }
 }

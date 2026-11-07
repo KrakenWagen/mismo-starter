@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./routes/*": "./routes/*"
+    "./routes/*": "./routes/*",
+    "./transitions.css": "./src/ui/transitions.css"
   },
   "scripts": {
     "typecheck": "mismo types --config routes.config.ts && tsc -b"

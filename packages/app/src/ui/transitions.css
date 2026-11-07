@@ -1,0 +1,77 @@
+/*
+ * Page changes on the web. `useNavDirection` in navigation.web.tsx sets `data-nav` on <html>:
+ * - On narrow screens, a detail page slides in and out, like a native stack.
+ * - On wide screens it crossfades, and moving between details doesn't animate at all.
+ * The rest of the page, like the sidebar, stays still.
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-old(content),
+::view-transition-new(content) {
+  animation-duration: 140ms;
+}
+
+html[data-nav="same"]::view-transition-old(content),
+html[data-nav="same"]::view-transition-new(content) {
+  animation: none;
+}
+
+@media (max-width: 839px) {
+  html[data-nav="forward"]::view-transition-old(content) {
+    animation: 260ms cubic-bezier(0.32, 0.72, 0, 1) both nav-to-behind;
+  }
+
+  html[data-nav="forward"]::view-transition-new(content) {
+    animation: 260ms cubic-bezier(0.32, 0.72, 0, 1) both nav-from-offscreen;
+  }
+
+  html[data-nav="back"]::view-transition-old(content) {
+    z-index: 1;
+    animation: 260ms cubic-bezier(0.32, 0.72, 0, 1) both nav-to-offscreen;
+  }
+
+  html[data-nav="back"]::view-transition-new(content) {
+    animation: 260ms cubic-bezier(0.32, 0.72, 0, 1) both nav-from-behind;
+  }
+}
+
+@keyframes nav-from-offscreen {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes nav-to-offscreen {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes nav-from-behind {
+  from {
+    opacity: 0.6;
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes nav-to-behind {
+  to {
+    opacity: 0.6;
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  * {
+    transition-duration: 0ms !important;
+  }
+}

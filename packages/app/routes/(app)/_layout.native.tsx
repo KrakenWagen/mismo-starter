@@ -1,5 +1,5 @@
 // Native's shell: the same shared frame, around a native stack.
-import { Link } from "@mismo/core";
+import { BackLink, Link } from "@mismo/core";
 import { Stack } from "expo-router";
 import { css, html } from "@mismo/ui";
 
@@ -23,6 +23,7 @@ const chrome: Chrome = {
   platform: "native",
   Scroll: NativeScroll,
   KeyboardFrame: NativeKeyboardFrame,
+  BackLink,
   ExternalLink: NativeExternalLink,
   useWideLayout: useNativeLayout,
   shareText: nativeShareText,
