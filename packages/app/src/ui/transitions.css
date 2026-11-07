@@ -2,6 +2,7 @@
  * Page changes on the web. `useNavDirection` in navigation.web.tsx sets `data-nav` on <html>:
  * - On narrow screens, a detail page slides in and out, like a native stack.
  * - On wide screens it crossfades, and moving between details doesn't animate at all.
+ * - After a swipe back or forward that the browser animated itself, nothing animates.
  * The rest of the page, like the sidebar, stays still.
  */
 ::view-transition-old(root),
@@ -15,7 +16,10 @@
 }
 
 html[data-nav="same"]::view-transition-old(content),
-html[data-nav="same"]::view-transition-new(content) {
+html[data-nav="same"]::view-transition-new(content),
+html[data-nav="none"]::view-transition-group(*),
+html[data-nav="none"]::view-transition-old(*),
+html[data-nav="none"]::view-transition-new(*) {
   animation: none;
 }
 
